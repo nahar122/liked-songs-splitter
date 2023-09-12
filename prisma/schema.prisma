@@ -8,8 +8,11 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+model SplitSchema {
+    id String @id @default(cuid())
+    createdAt DateTime @default(now())
+    name String @db.VarChar(255)
+    userId String
+
+    @@index([userId])
 }
