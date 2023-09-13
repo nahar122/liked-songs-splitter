@@ -19,7 +19,7 @@ const Playlist: React.FC<SpotifyPlaylistProps> = (props) => {
 
   return (
     <div className="playlist-wrapper my-2 flex overflow-hidden rounded-lg bg-purple-700 p-2 align-middle">
-      {props.images.length > 0 && props.images[0] && (
+      {props.images?.length && props.images.length > 0 && props.images[0] && (
         <>
           <div className="circle invisible relative px-8 py-2">
             <Image
