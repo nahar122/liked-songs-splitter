@@ -8,6 +8,11 @@ generator client {
   provider = "prisma-client-js"
 }
 
+model User {
+    id String @id @default(cuid())
+    spotifyUserId String
+}
+
 model SplitSchema {
     id String @id @default(cuid())
     createdAt DateTime @default(now())

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+/* html {
+  min-height: 100vh;
+  min-width: 100vw;
+} */
+
+body {
+  @apply absolute min-w-full font-anton text-white;
+  @layer {
+    background: #8c20df;
+  }
+}

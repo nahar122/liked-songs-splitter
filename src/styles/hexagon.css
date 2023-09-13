@@ -1,0 +1,21 @@
+.hexagon-wrapper {
+  width: 100%;
+  padding-bottom: 100%; /* 1:1 aspect ratio */
+  position: relative;
+}
+
+.hexagon {
+  overflow: visible;
+  /* position: absolute; */
+  z-index: 1;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon-image {
+  /* position: absolute; */
+  top: 0;
+  left: 50%;
+  width: calc(100% * 1.73205); /* ~sqrt(3) */
+  height: 100%;
+  transform: translateX(-50%);
+}
