@@ -58,7 +58,7 @@ const PlaylistDashboard = () => {
             circle.addEventListener("animationend", () => {
               const siblingChild = circle
                 .closest(".playlist-wrapper")
-                ?.querySelector("#playlist-card"); // Assuming the sibling child has an ID of 'card-body'
+                ?.querySelector("#playlist-card") as HTMLElement; // Assuming the sibling child has an ID of 'card-body'
               if (siblingChild) {
                 try {
                   siblingChild.style.opacity = "1";
