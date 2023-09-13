@@ -34,7 +34,7 @@ const PlaylistDashboard = () => {
   useEffect(() => {
     if (!spotifyPlaylistsLoading) {
       const newPlaylists =
-        spotifyPlaylistData?.items?.map((playlist) => ({
+        spotifyPlaylistData?.items?.map((playlist: any) => ({
           name: playlist.name,
           images: playlist.images,
         })) ?? []; // Fallback to an empty array if not iterable
@@ -60,7 +60,11 @@ const PlaylistDashboard = () => {
                 .closest(".playlist-wrapper")
                 ?.querySelector("#playlist-card"); // Assuming the sibling child has an ID of 'card-body'
               if (siblingChild) {
-                siblingChild.style.opacity = "1";
+                try {
+                  siblingChild.style.opacity = "1";
+                } catch (error) {
+                  console.error(error);
+                }
               }
             });
 
