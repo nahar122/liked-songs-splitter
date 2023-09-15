@@ -26,7 +26,7 @@ const Home = () => {
         });
       },
       {
-        threshold: 0.4, // Adjust this according to your needs
+        threshold: 0.8, // Adjust this according to your needs
       },
     );
 
@@ -55,7 +55,7 @@ const Home = () => {
         });
       },
       {
-        threshold: 0.4, // Adjust this according to your needs
+        threshold: 0.6, // Adjust this according to your needs
       },
     );
 
@@ -86,7 +86,7 @@ const Home = () => {
         });
       },
       {
-        threshold: 0.4, // Adjust this according to your needs
+        threshold: 0.8, // Adjust this according to your needs
       },
     );
 
