@@ -1,7 +1,8 @@
 import PageLayout from "./components/PageLayout";
+import { api } from "~/utils/api";
 
 const Split = () => {
-  return <PageLayout>Split Screen</PageLayout>;
+  return <PageLayout>Yurrr</PageLayout>;
 };
 
 export default Split;

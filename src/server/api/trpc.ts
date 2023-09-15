@@ -13,20 +13,20 @@ interface AuthContext {
   auth: SignedInAuthObject | SignedOutAuthObject;
 }
 
-export const createContextInner = async ({ auth }: AuthContext) => {
+export const createContextInner = ({ auth }: AuthContext) => {
   return {
     auth,
   };
 };
 
-export const createContext = async (
-  opts: trpcNext.CreateNextContextOptions,
-) => {
+export const createContext = (opts: trpcNext.CreateNextContextOptions) => {
   const auth = getAuth(opts.req);
   // console.log("Debug: Auth is", auth);
-  return await createContextInner({
+  const authContext = createContextInner({
     auth: auth,
   });
+
+  return authContext;
 };
 
 export type Context = trpc.inferAsyncReturnType<typeof createContext>;

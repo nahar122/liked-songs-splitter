@@ -9,7 +9,7 @@
 } */
 
 body {
-  @apply absolute min-w-full font-anton text-white;
+  @apply absolute min-w-full overflow-x-hidden font-anton text-white;
   @layer {
     background: #8c20df;
   }
