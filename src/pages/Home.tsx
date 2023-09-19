@@ -2,8 +2,11 @@ import { useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
+import { api } from "~/utils/api";
 
 const Home = () => {
+  // const openaiResponse = api.openAIRouter.authenticateOpenAI.useQuery();
+  // console.log(openaiResponse);
   useEffect(() => {
     const bottomElement = document.querySelector(`[id='bottom']`);
 
@@ -94,7 +97,7 @@ const Home = () => {
   }, []); // Your useEffect dependencies
 
   return (
-    <div className=" flex h-full w-full flex-col items-center gap-8 text-center md:max-w-6xl">
+    <div className="flex h-full w-full flex-col items-center gap-8 text-center md:max-w-6xl">
       <section className="flex flex-col justify-center align-middle ">
         <h1 className="flex flex-wrap items-center justify-center p-4 text-center text-6xl">
           <span className="font-bold text-white sm:text-xl md:text-4xl">
@@ -167,8 +170,8 @@ const Home = () => {
                 own <i>custom categories</i>, and let the algorithm work its
                 magic.
                 <br />
-                I`&apos;`ts not just easy—it `&apos;`s
-                <b className="text-yellow-400">effortless.</b>
+                I&apos;ts not just easy—it&apos;s
+                <b className="text-yellow-400"> effortless.</b>
               </p>
             </div>
           </div>

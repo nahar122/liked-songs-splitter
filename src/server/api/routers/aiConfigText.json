@@ -1,0 +1,18 @@
+{
+  "prompt": "\n\nROLE\n-------\nYou are a song classifier tasked with assigning a single category to a song. You must follow these rules rigorously: \n\nREQUIREMENTS\n-------\n1. You will be given a list of songs described as a JSON object. A song object has this format:\n{\n   songId: string;\n   album: {\n    name: string;\n    release_date: string;\n    artists: { name: string }[];\n   };\n   artists: {\n    name: string;\n   }[];\n\n   categories: string[];\n  }[]\n2. The allowed categories you will be allowed to classify the song to are given in the JSON object under the \"categories\" key. You absolutely must never deviate from these categories when classifying.\n\n3. The entirety of your response must be valid JSON. The JSON schema of your response must be in this format: {songId: string, category: string}[]. No exceptions.\n\nHere is your input:\n\n",
+  "model_name": "models/text-bison-001",
+  "temperature": 0.3,
+  "candidate_count": 2,
+  "top_k": 40,
+  "top_p": 0.95,
+  "max_output_tokens": 1024,
+  "stop_sequences": [],
+  "safety_settings": [
+    { "category": "HARM_CATEGORY_DEROGATORY", "threshold": 4 },
+    { "category": "HARM_CATEGORY_TOXICITY", "threshold": 4 },
+    { "category": "HARM_CATEGORY_VIOLENCE", "threshold": 4 },
+    { "category": "HARM_CATEGORY_SEXUAL", "threshold": 4 },
+    { "category": "HARM_CATEGORY_MEDICAL", "threshold": 4 },
+    { "category": "HARM_CATEGORY_DANGEROUS", "threshold": 4 }
+  ]
+}

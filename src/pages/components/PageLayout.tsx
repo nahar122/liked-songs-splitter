@@ -1,4 +1,5 @@
 import Header from "./Header";
+import HexagonGrid from "./HexagonGrid";
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -6,13 +7,13 @@ interface PageLayoutProps {
 
 const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   return (
-    <>
+    <div className="h-full w-full">
       <Header />
 
-      <main className="relative my-10 flex h-full justify-center ">
-        {children}
-      </main>
-    </>
+      <main className=" my-10 flex h-full justify-center">{children}</main>
+      {/* <HexagonGrid>
+      </HexagonGrid> */}
+    </div>
   );
 };
 

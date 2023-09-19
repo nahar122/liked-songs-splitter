@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         anton: ["Anton", "sans-serif"],
       },
+      backgroundImage: {
+        "main-image": "url('/background.png')",
+      },
     },
   },
   plugins: [],

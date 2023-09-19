@@ -14,3 +14,45 @@ body {
     background: #8c20df;
   }
 }
+
+.hexagon-grid {
+  width: 10;
+  padding-bottom: calc(100px * 0.866);
+  visibility: visible;
+  background-color: blue;
+  overflow: hidden;
+  position: absolute;
+  z-index: 20;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  display: block;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  position: absolute;
+}
+
+.hexagon::before {
+  border-bottom: 86.6px solid blue;
+  top: -86.6px;
+  left: 0;
+}
+
+.hexagon::after {
+  border-top: 86.6px solid blue;
+  bottom: -86.6px;
+  left: 0;
+}
+
+@keyframes appear {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
